@@ -9,7 +9,7 @@ Things I found interesting about this code:
 - It listens to `window.addEventListener("hashchange", () => {` and then implements filter toggles as plain `<a href="#/active">Active</a>` links with no event handlers
 - `TodoStore = class extends EventTarget {` then `TodoStore` uses `this.dispatchEvent(new CustomEvent('save'));` on changes and the app uses `Todos.addEventListener("save", App.render);` to re-render when something changes
 
-BUT it turns out I was looking at the wrong code! Marc's [app-architecture](https://github.com/1Marc/todomvc-vanillajs-2022/tree/app-architecture/) branch is much more interesting.
+BUT it turns out I was looking at the wrong code! Marc's [app-architecture](https://github.com/1Marc/todomvc-vanillajs-2022/tree/app-architecture/) branch is much more interesting. Here's [the commit](https://github.com/1Marc/todomvc-vanillajs-2022/commit/524d6d51ded39aa5b01dbd16e69822b719092dbb) with the most relevant changes compared to the code that I've annotated here.
 
 ## License
 
