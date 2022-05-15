@@ -38,7 +38,10 @@
             document.querySelector(".todo-count strong").innerText = count;
           }
         </script>
-        <!-- Remove this if you don't implement routing -->
+        <!--
+        These do not have event handlers - clicking them updates the hash, which is then captured
+        by window.addEventListener("hashchange") elsewhere in js/app.js
+        -->
         <ul class="filters">
           <li>
             <a class="selected" href="#/">All</a>
